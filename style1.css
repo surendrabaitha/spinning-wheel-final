@@ -1,0 +1,233 @@
+
+.container-inner {
+    position: relative;
+    width: 100%;
+    /* height: 400px; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    top: 0px; /* Adjust vertical positioning */
+    
+}
+
+/* .container-inner .outRing{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    transform: scale(1.6);
+    top: 39px;
+    right: 39px;
+    border-radius: 100%;
+    overflow: hidden;
+} */
+
+
+/* .ring{
+    position: absolute;
+    top: 55px;
+} */
+
+
+.container-inner .spinBtn {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 17px;
+    color: #333;
+    border: 6px solid rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+}
+
+.container-inner .spinBtn::before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    width: 23px;
+    height: 30px;
+    background-color: #fff;
+    clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+}
+
+.container-inner .wheel {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: #333;
+    border-radius: 50%;
+    overflow: hidden;
+
+    transition: transform 5s ease-in-out;
+    
+}
+
+.container-inner .wheel .number {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: var(--clr);
+    transform-origin: bottom right;
+    transform: rotate(calc(72deg * var(--i)));
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.container-inner .wheel .number span {
+    position: relative;
+    transform: rotate(-55deg); /* Counter-rotate to keep text upright */
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.15);
+}
+
+#winner {
+    position: absolute;
+    top: 418px;
+    color: black;
+    text-align: center;
+    border-radius: 8px;
+    padding: 3px 5px;
+    font-size: 20px;
+    background-color: white;
+    /* width: 50%; */
+}
+
+
+
+
+.zoom-in-zoom-out {
+    position: fixed;
+     top: 18%; 
+     background-color: white; 
+     color: black; 
+     padding: 8px; 
+     border-radius: 6px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    text-align: center;   
+    text-align: center;
+    animation: zoom-in-zoom-out 2s ease-out infinite;
+  }
+  
+  @keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.1, 1.1);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+
+  /* modal css */
+
+   /* Overlay for modal background */
+   .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 0 0 / 85%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  /* Modal box styling */
+  .modal-box {
+    /* background-color: #ffffff; */
+    background-image: url('./img/bg.jpeg');
+    border-radius: 12px;
+    padding: 30px;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+
+  /* Icon and confetti around it */
+  .modal-icon {
+    font-size: 48px;
+    color: #fbbf24;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  /* Title styling */
+  .modal-title {
+    font-size: 45px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+    font-family: cursive;
+    
+  }
+
+  /* Paragraph styling */
+  .modal-content {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+
+  /* Button styling */
+  .modal-button {
+    background-color: #8b5cf6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .modal-button:hover {
+    background-color: #7c3aed;
+  }
+  
+    
+    
+      .btn-grad {background-image: linear-gradient(to right, #030100 0%, #000000  51%, #FF512F  100%)}
+           .btn-grad {
+              margin: 10px auto;
+              padding: 14px 40px;
+              text-align: center;
+              text-transform: uppercase;
+              transition: 0.5s;
+              background-size: 200% auto;
+              color: white;            
+              box-shadow: 0 0 20px #eee;
+              border-radius: 10px;
+              font-size: 16px;
+              display: block;
+              border: none;
+              text-decoration: none;
+            }
+  
+            .btn-grad:hover {
+              background-position: right center; /* change the direction of the change here */
+              color: #fff;
+              text-decoration: none;
+            }
+           
